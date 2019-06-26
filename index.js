@@ -17,6 +17,10 @@ const server = express();
 server.use(helmet());
 server.use(express.json());
 
+server.get("/", (req,res)=>{
+  res.send("webdb-iii-guided practice!")
+})
+
 // list all roles
 server.get('/api/roles', async (req, res) => {
   // get the roles from the database
